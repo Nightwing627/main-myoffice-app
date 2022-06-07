@@ -1,0 +1,9 @@
+Apps
+Restorant   apps/restaurant
+Shop        apps/shop
+Conference  apps/conference
+Radio       apps/radio
+NightClub   apps/nightclub
+News App    apps/news
+Chat App    apps/chat
+Scanner     apps/ticketScenner

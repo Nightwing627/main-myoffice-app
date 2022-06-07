@@ -1,0 +1,155 @@
+{
+ "adminConfig":{
+  "appName": "News Admin",
+  "slogan":"made with love for a better firebase.",
+  
+  "design":{
+    "sidebarBg":"sidebar-1.jpg", 
+    "dataActiveColor":"rose",
+    "dataBackgroundColor":"black"
+  },
+  
+  "showItemIDs":false,
+  "showSearchInTables":true,
+  "allowedUsers":null,
+  "fieldBoxName": "Fields",
+  "maxNumberOfTableHeaders":5,
+  "prefixForJoin":["-L0"],
+  "methodOfInsertingNewObjects":"push",
+  "urlSeparator":"+",
+  "urlSeparatorFirestoreSubArray":"~",
+  "googleMapsAPIKey":"AIzaSyBWjC4GPL5NhjeSiH_mmdDmZfIB03UrPi8",
+  
+  "fieldsTypes":{
+    "photo":["photo","image","category_image"],
+    "dateTime":["datetime","start","date"],
+    "date":["datefield","created"],
+    "time":["time"],
+    "map":["map","latlng","location","eventLocation"],
+    "textarea":["description"],
+    "html":["content"],
+    "radio":["radio","radiotf","featured","isShopping","showPhotos","layout","coloring","outbound","rounded","sectionType","showNavButton"],
+    "checkbox":["checkbox"],
+    "dropdowns":["type","status","dropdowns","navButtonAction"],
+    "file":["videoField"],
+    "rgbaColor":["rgba"],
+    "hexColor":["*Color","buttonText"],
+    "relation":["creator","collection","collection_recipe","collection_product","collection_news"],
+    "iconmd":["icon","*Icon"],
+    "iconfa":["iconfa"],
+    "iconti":["iconti"]
+  },
+  "optionsForSelect":[
+      {"key":"dropdowns","options":["new","processing","rejected","completed"]},
+      {"key":"checkbox","options":["Skopje","Belgrade","New York"]},
+      {"key":"type","options":["Bug fix","Feature","Improuvment","deleted","added","updated"]},
+      {"key":"status","options":["just_created","confirmed","canceled"]},
+      {"key":"radio","options":["no","maybe","yes"]},
+      {"key":"radiotf","options":["true","false"]},
+      {"key":"featured","options":["true","false"]},
+      {"key":"isShopping","options":["true","false"]},
+      {"key":"rounded","options":["true","false"]},
+      {"key":"outbound","options":["true","false"]},
+      {"key":"layout","options":["side","tabs"]},
+      {"key":"coloring","options":["simple","advanced"]},
+      {"key":"showPhotos","options":["true","false"]},
+      {"key":"showNavButton","options":["true","false"]},
+      {"key":"navButtonAction","options":["add-to-favorites"]},
+      {"key":"sectionType","options":["master-detail","cart","orders","wish-list"]}
+  ],
+  "optionsForRelation":[
+    {
+        "display": "title",
+        "isValuePath": true,
+        "key": "collection_news",
+        "path": "/news_collection",
+        "produceRelationKey": false,
+        "relationJoiner": "-",
+        "relationKey": "news_collection",
+        "value": "name"
+      }
+  ],
+  "paging":{
+    "pageSize": 20,
+    "finite": true,
+    "retainLastPage": false
+  }
+  },
+  "fsschema":{
+    "news":{
+      "fields":{
+        "collection_news":"",
+        "description":"Your event description",
+        "image":"https://i.imgur.com/svaHD6d.jpg",
+        "title":"Your event title",
+        "date":"2018-01-01 18:00"
+      },
+      "collections":["photos"]
+    },
+    "news_collection":{
+      "fields":{
+        "title":"Your category title",
+        "description":"Category description",
+        "image":"https://i.imgur.com/tcglVPv.jpg"
+      },
+      "collections":[]
+    }
+  },
+  "navigation":[
+    {
+      "link": "/",
+      "name": "Dashboard",
+      "schema":null,
+      "icon":"home",
+      "path": "",
+      "isIndex":true
+    },
+    
+    {
+      "link": "firestoreadmin",
+      "path": "news",
+      "name": "News",
+      "icon":"list",
+      "tableFields":["title","image"]
+    },
+    {
+      "link": "firestoreadmin",
+      "path": "news_collection",
+      "name": "Categories",
+      "icon":"layers",
+      "tableFields":[]
+    },
+    {
+      "link": "fireadmin",
+      "path": "news",
+      "name": "App setup",
+      "icon":"settings_applications",
+      "tableFields":["name","description"],
+      "subMenus":[
+        {
+          "link": "fireadmin",
+          "path": "/meta/design",
+          "name": "Design",
+          "icon":"brush",
+          "tableFields":["name","description"]
+        },{
+          "link": "fireadmin",
+          "path": "/meta/navigation/menus",
+          "name": "Navigation",
+          "icon":"menu",
+          "tableFields":["name","description"]
+        }
+      ]
+    }
+  ],
+  "pushSettings":{
+  "pushType":"expo",
+  "Firebase_AuthorizationPushKey":"AIzaSyCFUf7fspu61J9YsWE-2A-vI9of1ihtSiE",
+  "pushTopic":"news",
+  "oneSignal_REST_API_KEY":"",
+  "oneSignal_APP_KEY":"",
+  "included_segments":"Active Users",
+  "firebasePathToTokens":"/expoPushTokens",
+  "saveNotificationInFireStore":true
+  }
+}

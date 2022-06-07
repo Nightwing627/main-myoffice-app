@@ -1,0 +1,125 @@
+{
+  "appImage" : "https://firebasestorage.googleapis.com/v0/b/universalapp-a272a.appspot.com/o/1535580286065.jpg?alt=media&token=1935ade8-714e-49f2-b199-6ea471c98295",
+  "appListIcon" : "MdRestaurant",
+  "appLogo" : "https://firebasestorage.googleapis.com/v0/b/tester-8e38d.appspot.com/o/1547909762580.jpg?alt=media&token=6ebe1963-2214-430b-8a08-d4707b406c42",
+  "appNavLogo" : "https://firebasestorage.googleapis.com/v0/b/tester-8e38d.appspot.com/o/1547909755800.jpg?alt=media&token=88654f56-e182-4347-a168-50752f35fafe",
+  "appSplash" : "https://firebasestorage.googleapis.com/v0/b/tester-8e38d.appspot.com/o/1547909722339.jpg?alt=media&token=69b5c168-2e2d-4c11-970b-d9f46255cbe0",
+  "config" : {
+    "currency_format" : "amount_with_comma_separator",
+    "currency_value" : "$",
+    "date_format" : "d-m-Y",
+    "date_format_from" : "Y-m-d",
+    "distance_in" : "km",
+    "time_format" : "H:I",
+    "time_format_from" : "h:i"
+  },
+  "design" : {
+    "general" : {
+      "backgroundColor" : "#e9e9ef",
+      "buttonColor" : "#BD1C1D"
+    }
+  },
+  "name" : "Restaurant App",
+  "navigation" : {
+    "menus" : [ {
+      "categorySetup" : {
+        "category_style" : "grid1",
+        "data_point" : "restaurant_collection",
+        "fields" : {
+          "description" : "description",
+          "image" : "image",
+          "title" : "title"
+        }
+      },
+      "category_first" : true,
+      "detailsSetup" : {
+        "actionButton" : "ADD TO CART",
+        "actionButtonWhenActionDone" : "PRODUCT ADDED",
+        "cartCODAvailable" : true,
+        "collections" : [ "variants", "ingredients", "photos" ],
+        "descriptionTitle" : "Description",
+        "fields" : {
+          "description" : "description",
+          "descriptionFunctions" : ",",
+          "image" : "image",
+          "numReview" : "numReview",
+          "photos" : "photos",
+          "price" : "price",
+          "priceFunctions" : "round,toCurrency~USD,prepend~Price: ",
+          "rating" : "rating",
+          "review" : "review",
+          "shareLink" : "link",
+          "subPrice" : "price",
+          "subPriceFunctions" : "multiply~{qty},round,toCurrency~USD,prepend~/per peace ,append~ for {qty} item/s.",
+          "subtitle" : "calories",
+          "subtitleFunctions" : "prepend~Calories: ,append~ kCal",
+          "title" : "title",
+          "titleFunctions" : "trim:40",
+          "video" : "video"
+        },
+        "isShopping" : true,
+        "photosTitle" : "Product Images",
+        "reviewButton" : "Write review",
+        "shareButton" : "Share this recepie",
+        "showPhotos" : true,
+        "videoButton" : "View Video"
+      },
+      "icon" : "FeHome",
+      "isRoot" : true,
+      "listStyle" : "grid",
+      "listingSetup" : {
+        "collection_key" : "collection",
+        "data_point" : "restaurant",
+        "fields" : {
+          "actionButton" : "BUY",
+          "description" : "description",
+          "image" : "image",
+          "numReview" : "numReview",
+          "rating" : "rating",
+          "showRating" : true,
+          "subtitle" : "price",
+          "subtitleFunctions" : "roundOn,toCurrency~USD",
+          "title" : "title"
+        },
+        "listing_style" : "list",
+        "showRating" : true
+      },
+      "name" : "Menu"
+    }, {
+      "CODAvailable" : true,
+      "PayPalAvailable" : true,
+      "icon" : "FeShoppingCart",
+      "name" : "Cart",
+      "type" : "cart"
+    }, {
+      "icon" : "FeList",
+      "name" : "Orders",
+      "type" : "orders"
+    }, {
+      "category_image" : "https://firebasestorage.googleapis.com/v0/b/universalapp-a272a.appspot.com/o/1512599460179.jpg?alt=media&token=7ee9a95b-834a-4663-a826-8ee802f9e4ee",
+      "display_header_image" : true,
+      "icon" : "FeThumbsUp",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/universalapp-a272a.appspot.com/o/1512591149190.jpg?alt=media&token=64f7cc96-47f6-45f8-94a9-3f26533072db",
+      "listStyle" : "grid",
+      "name" : "Social",
+      "subMenus" : [ {
+        "id" : 1,
+        "image" : "https://cdn0.iconfinder.com/data/icons/popular-web-logos-button/140/1-04-2-256.png",
+        "link" : "https://www.instagram.com/theoakhotelkeramoti/",
+        "name" : "Instagram"
+      }, {
+        "id" : "2",
+        "image" : "https://cdn3.iconfinder.com/data/icons/popular-web-logos-button/140/1-03-256.png",
+        "link" : "https://www.facebook.com/theoakhotelkeramoti/",
+        "name" : "Facebook"
+      } ]
+    } ],
+    "type" : "side"
+  },
+  "users" : {
+    "GK9j6HF9jbfxtIAKx9ZUFVSRtVI2" : {
+      "email" : "Daniel@mobidonia.com.mk",
+      "username" : "Daniel Dimov"
+    }
+  }
+}

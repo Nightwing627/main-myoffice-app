@@ -1,0 +1,183 @@
+{
+  "adminConfig":{
+  "appName": "Shop Admin",
+  "slogan":"made with love for a better firebase.",
+
+  "design":{
+    "sidebarBg":"sidebar-1.jpg",
+    "dataActiveColor":"rose",
+    "dataBackgroundColor":"black"
+  },
+
+  "showItemIDs":false,
+  "showSearchInTables":true,
+  "allowedUsers":null,
+  "fieldBoxName": "Fields",
+  "maxNumberOfTableHeaders":5,
+  "prefixForJoin":["-L0"],
+  "methodOfInsertingNewObjects":"push",
+  "urlSeparator":"+",
+  "urlSeparatorFirestoreSubArray":"~",
+  "googleMapsAPIKey":"AIzaSyBWjC4GPL5NhjeSiH_mmdDmZfIB03UrPi8",
+
+  "fieldsTypes":{
+    "photo":["photo","image","category_image"],
+    "dateTime":["datetime","start"],
+    "date":["datefield","created"],
+    "time":["time"],
+    "map":["map","latlng","location"],
+    "textarea":["description"],
+    "html":["content"],
+    "radio":["radio","radiotf","featured","isShopping","showPhotos","layout","coloring","outbound","rounded","sectionType","showNavButton"],
+    "checkbox":["checkbox"],
+    "dropdowns":["type","status","dropdowns","navButtonAction"],
+    "file":["videoField"],
+    "rgbaColor":["rgba"],
+    "hexColor":["*Color","buttonText"],
+    "relation":["creator","collection","collection_recipe","collection_product"],
+    "iconmd":["icon","*Icon"],
+    "iconfa":["iconfa"],
+    "iconti":["iconti"]
+  },
+  "optionsForSelect":[
+      {"key":"dropdowns","options":["new","processing","rejected","completed"]},
+      {"key":"checkbox","options":["Skopje","Belgrade","New York"]},
+      {"key":"type","options":["Bug fix","Feature","Improuvment","deleted","added","updated"]},
+      {"key":"status","options":["just_created","confirmed","canceled"]},
+      {"key":"radio","options":["no","maybe","yes"]},
+      {"key":"radiotf","options":["true","false"]},
+      {"key":"featured","options":["true","false"]},
+      {"key":"isShopping","options":["true","false"]},
+      {"key":"rounded","options":["true","false"]},
+      {"key":"outbound","options":["true","false"]},
+      {"key":"layout","options":["side","tabs"]},
+      {"key":"coloring","options":["simple","advanced"]},
+      {"key":"showPhotos","options":["true","false"]},
+      {"key":"showNavButton","options":["true","false"]},
+      {"key":"navButtonAction","options":["add-to-favorites"]},
+      {"key":"sectionType","options":["master-detail","cart","orders","wish-list"]}
+  ],
+  "optionsForRelation":[
+    {
+        "display": "title",
+        "isValuePath": true,
+        "key": "collection_product",
+        "path": "/products_collection",
+        "produceRelationKey": true,
+        "relationJoiner": "-",
+        "relationKey": "type_eventid",
+        "value": "name"
+      }
+  ],
+  "paging":{
+    "pageSize": 20,
+    "finite": true,
+    "retainLastPage": false
+  }
+},
+"fsschema":{
+  "products":{
+		"fields":{
+			"brand":"Brand name",
+			"collection_product":"",
+			"description":"Your product description",
+			"image":"https://i.imgur.com/zcl46Wx.jpg",
+			"price":"10",
+			"title":"Your product title",
+			"options":{
+				"option1":{
+					"name":"Color",
+					"values":["Black","White"]
+				},
+				"option2":{
+					"name":"Additional prop2",
+					"values":["Option 2"]
+				},
+				"option3":{
+					"name":"Additional prop3",
+					"values":["Option 3 "]
+				}
+			}
+		},
+		"collections":["variants","photos"]
+	},
+	"products_collection":{
+		"fields":{
+			"title":"Your category title",
+			"description":"Category description",
+			"image":"https://i.imgur.com/zcl46Wx.jpg"
+			
+		},
+		"collections":[]
+	},
+
+	"TEMPLATE":{
+		"fields":{},
+		"collections":[]
+	}
+},
+"navigation":[
+    {
+      "link": "/",
+      "name": "Dashboard",
+      "schema":null,
+      "icon":"home",
+      "path": "",
+      "isIndex":true
+    },
+    {
+      "link": "firestoreadmin",
+      "path": "orders",
+      "name": "Orders",
+      "icon":"shopping_cart",
+      "tableFields":["status","total"]
+    },
+    {
+      "link": "firestoreadmin",
+      "path": "products",
+      "name": "Products",
+      "icon":"list",
+      "tableFields":["title","image","price"]
+    },
+    {
+      "link": "firestoreadmin",
+      "path": "products_collection",
+      "name": "Categories",
+      "icon":"layers",
+      "tableFields":[]
+    },
+    {
+      "link": "fireadmin",
+      "path": "events",
+      "name": "App setup",
+      "icon":"settings_applications",
+      "tableFields":["name","description"],
+      "subMenus":[
+        {
+          "link": "fireadmin",
+          "path": "/meta/design",
+          "name": "Design",
+          "icon":"brush",
+          "tableFields":["name","description"]
+        },{
+          "link": "fireadmin",
+          "path": "/meta/navigation/menus",
+          "name": "Navigation",
+          "icon":"menu",
+          "tableFields":["name","description"]
+        }
+      ]
+    }
+  ],
+  "pushSettings":{
+  "pushType":"expo",
+  "Firebase_AuthorizationPushKey":"AIzaSyCFUf7fspu61J9YsWE-2A-vI9of1ihtSiE",
+  "pushTopic":"news",
+  "oneSignal_REST_API_KEY":"",
+  "oneSignal_APP_KEY":"",
+  "included_segments":"Active Users",
+  "firebasePathToTokens":"/expoPushTokens",
+  "saveNotificationInFireStore":true
+}
+
+}

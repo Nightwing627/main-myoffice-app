@@ -1,0 +1,165 @@
+{
+  "adminConfig":{
+    "appName": "Radio Admin",
+    "slogan":"made with love for a better firebase.",
+    
+    "design":{
+      "sidebarBg":"sidebar-1.jpg",
+      "dataActiveColor":"rose", 
+      "dataBackgroundColor":"black"
+    },
+    
+    "showItemIDs":false,
+    "showSearchInTables":true,
+    "allowedUsers":null,
+    "fieldBoxName": "Fields",
+    "maxNumberOfTableHeaders":5,
+    "prefixForJoin":["-L0"],
+    "methodOfInsertingNewObjects":"push",
+    "urlSeparator":"+",
+    "urlSeparatorFirestoreSubArray":"~",
+    "googleMapsAPIKey":"AIzaSyBWjC4GPL5NhjeSiH_mmdDmZfIB03UrPi8",
+    
+    "fieldsTypes":{
+      "photo":["photo","image","category_image"],
+      "dateTime":["datetime","start","eventDateStart","eventDateEnd","date"],
+      "date":["datefield","created"],
+      "time":["time"],
+      "map":["map","latlng","location","eventLocation"],
+      "textarea":["description"],
+      "html":["content"],
+      "radio":["radio","radiotf","featured","isShopping","showPhotos","layout","coloring","outbound","rounded","sectionType","showNavButton"],
+      "checkbox":["checkbox","streamType"],
+      "dropdowns":["status","dropdowns","navButtonAction","type"],
+      "file":["videoField"],
+      "rgbaColor":["rgba"],
+      "hexColor":["*Color","buttonText"],
+      "relation":["creator","collection","collection_recipe","collection_radios"],
+      "iconmd":["icon","*Icon"],
+      "iconfa":["iconfa"],
+      "iconti":["iconti"]
+    },
+    "optionsForSelect":[
+        {"key":"dropdowns","options":["new","processing","rejected","completed"]},
+        {"key":"checkbox","options":["Skopje","Belgrade","New York"]},
+        {"key":"streamType","options":["icecast","shoutcast","shoutcast2"]},
+        {"key":"type","options":["Bug fix","Feature","Improuvment","deleted","added","updated"]},
+        {"key":"status","options":["just_created","confirmed","canceled"]},
+        {"key":"radio","options":["no","maybe","yes"]},
+        {"key":"radiotf","options":["true","false"]},
+        {"key":"featured","options":["true","false"]},
+        {"key":"isShopping","options":["true","false"]},
+        {"key":"rounded","options":["true","false"]},
+        {"key":"outbound","options":["true","false"]},
+        {"key":"layout","options":["side","tabs"]},
+        {"key":"coloring","options":["simple","advanced"]},
+        {"key":"showPhotos","options":["true","false"]},
+        {"key":"showNavButton","options":["true","false"]},
+        {"key":"navButtonAction","options":["add-to-favorites"]},
+        {"key":"sectionType","options":["master-detail","cart","orders","wish-list"]}
+    ],
+    "optionsForRelation":[
+      {
+          "display": "title",
+          "isValuePath": true,
+          "key": "collection_radios",
+          "path": "/radios_collection",
+          "produceRelationKey": true,
+          "relationJoiner": "-",
+          "relationKey": "radios_collection",
+          "value": "name"
+        }
+    ],
+    "paging":{
+      "pageSize": 20,
+      "finite": true,
+      "retainLastPage": false
+    }
+  },
+  "fsschema":{
+    "radios":{
+      "fields":{
+        "currentSong":"Current song",
+        "radios_collection":"",
+        "description":"The description about the radio",
+        "image":"https://i.scdn.co/image/f87d436bcce8be370a2cb8d6512f5de8ac89d5ce",
+        "name":"Enter the name of the radio",
+        "currentArtist":"Current artist",
+        "stream":"http://176.9.117.123:9998/;stream/1",
+        "stationName":"Radio name",
+        "streamType":"icecast"
+        
+      },
+      "collections":[]
+    },
+    
+    "radios_collection":{
+      "fields":{
+        "title":"Enter the type",
+        "description":"Enter the type discription",
+        "image":"https://i2.cdscdn.com/pdt2/6/7/9/1/700x700/auc8713016015679/rw/radio-cd-stereo-audiosonic.jpg",
+        "name":"Enter the type"
+      },
+      "collections":[]
+    }
+  },
+    
+    "navigation":[
+      {
+        "link": "/",
+        "name": "Dashboard",
+        "schema":null,
+        "icon":"home",
+        "path": "",
+         "isIndex":true
+      },
+      {
+        "link": "firestoreadmin",
+        "path": "radios",
+        "name": "Radios",
+        "icon":"list",
+        "tableFields":["title","image","price"]
+      },
+      {
+        "link": "firestoreadmin",
+        "path": "radios_collection",
+        "name": "Categories",
+        "icon":"layers",
+        "tableFields":[]
+      },
+      {
+        "link": "fireadmin",
+        "path": "conference",
+        "name": "App setup",
+        "icon":"settings_applications",
+        "tableFields":["name","description"],
+        "subMenus":[
+          {
+            "link": "fireadmin",
+            "path": "/meta/design",
+            "name": "Design",
+            "icon":"brush",
+            "tableFields":["name","description"]
+          },{
+            "link": "fireadmin",
+            "path": "/meta/navigation/menus",
+            "name": "Navigation",
+            "icon":"menu",
+            "tableFields":["name","description"]
+          }
+        ]
+      }
+    ],
+  
+    "pushSettings":{
+    "pushType":"expo",
+    "Firebase_AuthorizationPushKey":"AIzaSyCFUf7fspu61J9YsWE-2A-vI9of1ihtSiE",
+    "pushTopic":"news",
+    "oneSignal_REST_API_KEY":"",
+    "oneSignal_APP_KEY":"",
+    "included_segments":"Active Users",
+    "firebasePathToTokens":"/expoPushTokens",
+    "saveNotificationInFireStore":true
+    }
+   
+  }

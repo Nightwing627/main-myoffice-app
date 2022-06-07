@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "App Platform - UniExpo Demo",
+    "description": "Demo app for UniExpo Apps",
+    "slug": "uniexpodemo",
+    "privacy": "public",
+    "version": "2.1.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "firebaseMetaPath": "meta"
+    },
+    "icon": "./assets/icons/app.png",
+    "loading": {
+      "icon": "./assets/icons/loading.png",
+      "hideExponentText": false
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.mobidoniauni.uniexpodemo"
+    },
+    "android": {
+      "package": "com.mobidoniauni.uniexpodemo",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCZhq0g1x1ttXPa1QB3ylcDQPTAzp_KUgA"
+        }
+      }
+    }
+  }
+}
